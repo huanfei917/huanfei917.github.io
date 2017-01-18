@@ -1,0 +1,711 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="边框圆角标签（空格分隔）： CSS3
+
+
+
+在早期如果想要制作四周有圆角的元素时,需要专门制作一张图片(这其实没什么),但是试想一下,如果要修改圆角的各种关系,比如颜色,半径等等,必须去重新修改图片才能够实现(十分麻烦).在html5中针对这个效果专门推出了一个属性border-radiusw3c_CSS3边框讲解页面
+
+使用方法:
+属性名:
+border-radius
+
+
+赋值方法: 
+赋值的方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="边框圆角">
+<meta property="og:url" content="http://yoursite.com/2017/01/18/07.边框圆角/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="边框圆角标签（空格分隔）： CSS3
+
+
+
+在早期如果想要制作四周有圆角的元素时,需要专门制作一张图片(这其实没什么),但是试想一下,如果要修改圆角的各种关系,比如颜色,半径等等,必须去重新修改图片才能够实现(十分麻烦).在html5中针对这个效果专门推出了一个属性border-radiusw3c_CSS3边框讲解页面
+
+使用方法:
+属性名:
+border-radius
+
+
+赋值方法: 
+赋值的方">
+<meta property="og:image" content="http://yoursite.com/imgs/desk.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/box1.png">
+<meta property="og:image" content="http://yoursite.com/imgs/box2.png">
+<meta property="og:image" content="http://yoursite.com/imgs/box3.png">
+<meta property="og:image" content="http://yoursite.com/imgs/box4.png">
+<meta property="og:image" content="http://yoursite.com/imgs/box5.png">
+<meta property="og:image" content="http://yoursite.com/imgs/box6.png">
+<meta property="og:updated_time" content="2017-01-17T08:55:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="边框圆角">
+<meta name="twitter:description" content="边框圆角标签（空格分隔）： CSS3
+
+
+
+在早期如果想要制作四周有圆角的元素时,需要专门制作一张图片(这其实没什么),但是试想一下,如果要修改圆角的各种关系,比如颜色,半径等等,必须去重新修改图片才能够实现(十分麻烦).在html5中针对这个效果专门推出了一个属性border-radiusw3c_CSS3边框讲解页面
+
+使用方法:
+属性名:
+border-radius
+
+
+赋值方法: 
+赋值的方">
+<meta name="twitter:image" content="http://yoursite.com/imgs/desk.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/18/07.边框圆角/"/>
+
+
+
+
+
+  <title> 边框圆角 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/07.边框圆角/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/huan.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Hexo" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                边框圆角
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T21:22:50+08:00">
+                2017-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="边框圆角"><a href="#边框圆角" class="headerlink" title="边框圆角"></a>边框圆角</h1><p>标签（空格分隔）： CSS3</p>
+<hr>
+<p><img src="imgs/desk.jpg" alt="前端与移动学院"></p>
+<blockquote>
+<p>在早期如果想要制作四周有圆角的元素时,需要专门制作一张图片(这其实没什么),但是试想一下,如果要修改圆角的各种关系,比如颜色,半径等等,必须去重新修改图片才能够实现(十分麻烦).<br><br>在<code>html5</code>中针对这个效果专门推出了一个属性<code>border-radius</code><br><a href="http://www.w3school.com.cn/css3/css3_border.asp" target="_blank" rel="external">w3c_CSS3边框讲解页面</a></p>
+</blockquote>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h2><ul>
+<li><strong>属性名:</strong><ul>
+<li>border-radius</li>
+</ul>
+</li>
+<li><strong>赋值方法:</strong> <ul>
+<li>赋值的方法类似于<code>margin</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-color</span>: <span class="selector-tag">rebeccapurple</span>;</div><div class="line"><span class="selector-tag">border-radius</span><span class="selector-pseudo">:20px</span>;</div><div class="line"><span class="comment">/*设置四周的圆角*/</span></div></pre></td></tr></table></figure>
+<p><img src="imgs/box1.png" alt="box1.png-2kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: aqua;</div><div class="line">border-radius: 50px 10px;</div><div class="line">/*上左下右,上右下左 */</div></pre></td></tr></table></figure>
+<p><img src="imgs/box2.png" alt="box2.png-2.3kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: seagreen;</div><div class="line">border-radius: 50px 30px 10px;</div><div class="line">/*上左,上右下左,下右*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box3.png" alt="box3.png-2.7kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: chartreuse;</div><div class="line">border-radius: 50px 40px 30px 20px;</div><div class="line">/*上左,上右,下右,下左*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box4.png" alt="box4.png-2.4kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: magenta;</div><div class="line">border-radius: 50px/100px;</div><div class="line">/*上下的圆角/左右的圆角*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box5.png" alt="box5.png-2.4kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">background-color: palevioletred;</div><div class="line">border-top-left-radius: 40px;</div><div class="line">/*上左*/</div><div class="line">border-top-right-radius: 10px;</div><div class="line">/*上右*/</div><div class="line">border-bottom-left-radius: 20px;</div><div class="line">/*下左*/</div><div class="line">border-bottom-right-radius: 50px;</div><div class="line">/*下右*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box6.png" alt="box6.png-2.8kB"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a><strong>总结:</strong></h2><blockquote>
+<p>该属性的用法十分简单,只要搞清楚四边的对应关系,就能够制作各种精美组合效果</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/18/06.input表单验证/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/huan.jpg"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#边框圆角"><span class="nav-number">1.</span> <span class="nav-text">边框圆角</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">1.1.</span> <span class="nav-text">使用方法:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.2.</span> <span class="nav-text">总结:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
